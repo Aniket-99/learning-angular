@@ -1,0 +1,66 @@
+<h1>Login Component</h1>
+
+<h2>Get and Set Value</h2>
+<h1>User name is : {{displayName}}</h1>
+<input type="text" value="{{name}}" (input)="getName($event)" placeholder="Enter a value"/>
+<button (click)="showName()">Get Value</button>
+<button (click)="setName()">Set Value</button>
+<hr>
+
+<h1>Email: {{email}}</h1>
+<input type="text" value="{{email}}" placeholder="Enter email" #emailField/>
+<button (click)="getEmail(emailField.value)">Get Email</button>
+<button (click)="setEmail()">Set Email</button>
+
+<hr>
+<!-- <button  (click)="hideDiv()">Hide Div</button>
+<button  (click)="showDiv()">Show Div</button> -->
+
+<button  (click)="toggleDiv()">Toggle Div</button>
+
+@if(display){
+    <div style="width: 200px; height: 200px; background-color: red;">
+
+    </div>
+
+}
+<hr>
+<button  (click)="toggleTwoDiv()">Toggle Div</button>
+@if(toggle){
+    <div style="width: 200px; height: 200px; background-color: red;">
+
+    </div>
+
+}
+@else {
+    <div style="width: 200px; height: 200px; background-color: blue;">
+
+    </div>
+}
+
+<hr>
+
+<h2>Switch Case</h2>
+
+<button (click)="handleColor('red')">Red Color</button>
+<button (click)="handleColor('blue')">Blue Color</button>
+<button (click)="handleColor('green')">Green Color</button>
+<button (click)="handleColor('gold')">Gold Color</button>
+
+<input type="text" (input)="changeColor($event)" placeholder="Enter color">
+
+@switch(color){
+    @case ('red') {
+        <h3 style="background-color: red;">Red Color</h3>
+    }
+     @case ('blue') {
+        <h3 style="background-color: blue;">Blue Color</h3>
+    }
+     @case ('green') {
+        <h3 style="background-color: green;">Green Color</h3>
+    }
+    @default {
+        <h3>No Color Matched</h3>
+
+    }
+}

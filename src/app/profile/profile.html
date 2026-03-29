@@ -1,0 +1,24 @@
+<h1>Profile Component 2</h1>
+
+{{x}}
+<h1>{{count()}}</h1>
+
+<!-- <button (click)="updateValue()">Increase Signal</button> -->
+
+<button (click)="count.set(count()+1)">Increase Signal</button>
+<button (click)="count.set(count()-1)">Decrease Signal</button>
+
+<hr>
+
+<h3>{{counter()}}</h3>
+
+@if (displayHeading) {
+    <h1 style="background-color: green;">Page Heading</h1>
+}
+
+<button (click)="toggleValue()">Update Counter</button>
+
+<hr>
+
+<input type="text" [(ngModel)]="name" placeholder="Enter name">
+<h3>{{name}}</h3>
