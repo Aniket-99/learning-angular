@@ -1,5 +1,6 @@
 import { Component, computed, effect, Signal, signal, WritableSignal } from "@angular/core";
 import { FormsModule } from "@angular/forms";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
     selector:'profile',
@@ -21,7 +22,9 @@ export class Profile{
     counter = signal(0);
     displayHeading = false;
 
-    constructor(){
+    userName:string|null = "";
+
+    constructor(private route : ActivatedRoute){
         // effect(()=>{
         //     console.log(this.count());
         // });
@@ -34,6 +37,12 @@ export class Profile{
                 this.displayHeading = false;
             }
         })
+    }
+
+    ngOnInit(){
+        let name = this.route.snapshot.paramMap.get('name');
+        console.log(name);
+        this.userName = name;
     }
 
     updateValue(){
