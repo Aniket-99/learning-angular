@@ -5,10 +5,11 @@ import { Profile } from './profile/profile';
 import { User } from './user/user';
 import { TodoApp } from './todo-app/todo-app';
 import { Header } from './header/header';
+import { ReactiveForm } from './reactive-form/reactive-form';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Login, Profile,User, TodoApp,RouterLink, Header],
+  imports: [RouterOutlet,Login, Profile,User, TodoApp,RouterLink, Header,ReactiveForm],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

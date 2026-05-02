@@ -10,7 +10,7 @@ export const routes: Routes = [
     {path:"user",component:User},
     {path:"login",component:Login},
     {path:"profile",component:Profile},
-    {path:"",component:TodoApp},
+    {path:"/todo",component:TodoApp},
     {path:"userd/:id/:name",component:UserData},
     {path:"**",component:PageNotFound}
 ];
