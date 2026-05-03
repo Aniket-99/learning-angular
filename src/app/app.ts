@@ -6,10 +6,11 @@ import { User } from './user/user';
 import { TodoApp } from './todo-app/todo-app';
 import { Header } from './header/header';
 import { ReactiveForm } from './reactive-form/reactive-form';
+import { TemplateDrivenForm } from './template-driven-form/template-driven-form';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Login, Profile,User, TodoApp,RouterLink, Header,ReactiveForm],
+  imports: [RouterOutlet,Login, Profile,User, TodoApp,RouterLink, Header,ReactiveForm,TemplateDrivenForm],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

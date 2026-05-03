@@ -11,7 +11,7 @@
     <span *ngIf="password?.hasError('required')">Password is Required</span>
     <span *ngIf="password?.invalid && (password?.dirty || password?.touched)">Please provide password</span>
     <br/><br/>
-
+ 
     <input type="text" placeholder="Enter Email" formControlName="email"/>
     <span *ngIf="email?.hasError('required')">Email is Required</span>
     <span *ngIf="email?.invalid && (email?.dirty || email?.touched)">Please provide Email</span>
